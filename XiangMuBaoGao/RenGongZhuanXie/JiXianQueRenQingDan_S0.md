@@ -126,3 +126,4 @@ D-01 已于 S1 裁决并关闭：技能文件位于项目根 `.claude/skills/pro
 | C-11 | 2026-11-10 | 技能层新增路径 ASCII 前置检查（`SKILL.md` 环境前置检查、guide 环境约束节）；决定：未来新项目强制，现有项目按 `requires-python >=3.14` 声明保持 | 来源 S3-01 中文路径致 `site.py` fatal |
 | C-12 | 2026-11-10 | `.gitignore` 补 `.pytest_cache/`、`.ruff_cache/`、`.mypy_cache/`、`.coverage`、`htmlcov/`、`*.egg-info/`；实测 `git check-ignore` 六条均命中 | S4/P-06：S3 未覆盖常见缓存，`.pytest_cache/` 与 `.ruff_cache/` 实际存在且此前未被忽略 |
 | C-13 | 2026-11-10 | 新增 `.gitattributes`（`* text=auto eol=lf`，甲方案）。`git add --renormalize .` 后 `git diff --cached --stat` 为**空**、`git diff --cached --ignore-cr-at-eol` 为**空**，即行尾规范化**零文件变更**（仓库索引原本已全 LF），故未产生 renormalize 提交；`.gitattributes` 自身以独立提交 `c09c82f` 落库（1 file changed, 1 insertion） | S5/Q2：行尾统一为 LF；首次 renormalize 无变更属预期 |
+| C-14 | 2026-11-10 | 技能规则补强：guide 顶部新增归属判定决策树（P1）；SKILL R5 自检五项→六项，新增"文档已同步"（P2） | S5 反馈清单 P1/P2；决策树与职责表一一对应，无冲突 |
