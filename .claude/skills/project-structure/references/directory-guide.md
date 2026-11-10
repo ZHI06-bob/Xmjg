@@ -2,6 +2,22 @@
 
 > 本文件是项目目录职责的**维护源**；项目根的 `MuLuJiaGouShuoMing.md` 由本文件派生同步，二者不一致时以本文件为准。
 
+## 归属判定决策树
+
+> **归属判定以本节为准**；职责表用于说明各目录的职责边界，不用于判定归属。两处如冲突，以本节为准，并立即修订职责表。
+
+判定顺序从"路径完全确定"到"最宽泛"，第一个命中即为归属：
+
+1. 是运行时产物（日志、报告 HTML、缓存）→ `RiZhiWenJian/<日期>/` 或 `XiangMuBaoGao/ZiDongShengCheng/`（均不入库）
+2. 是启动相关（入口脚本、启动 shell、启动参数）→ `XiangMuQiDongRuKou/`
+3. 是依赖声明 / 环境变量模板 / 日志配置值 → `HuanJingYiLai/`（按 `YunXingYiLai/`、`KaiFaYiLai/`、`HuanJingBianLiang/`、`rizhi.yaml` 细分）
+4. 是测试 → `XiangMuYuanMa/CeShi/`
+5. 是跨模块复用（≥2 个模块使用）→ `XiangMuYuanMa/app/gongyong/`
+6. 是业务模块或示例子包 → `XiangMuYuanMa/app/<小写拼音>/`
+7. 是架构 / 安装 / 命名说明 → `MuLuJiaGouShuoMing.md`
+8. 是阶段性文档 / 汇报 / 验证记录 → `XiangMuBaoGao/RenGongZhuanXie/`
+9. 以上均不命中 → 停止，询问用户，不自行造目录
+
 ## 目录职责表
 
 | 目录/文件 | 职责 | 放什么 / 不放什么 | 维护规则 |

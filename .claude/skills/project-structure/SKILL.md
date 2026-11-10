@@ -103,7 +103,7 @@ from app.gongyong.rizhi import <日志对象>
 2. 新增文件前先查 `references/directory-guide.md`，按职责表定位；表中无对应项时，先登记目录再建文件。
 3. 新增目录必须同步登记 `references/directory-guide.md` 与 `MuLuJiaGouShuoMing.md`（后者由前者派生）。
 4. 职责归属出现争议时，以 `references/directory-guide.md` 为准。
-5. 生成后做五项自检：位置是否符合职责表、import 前缀是否为 `from app.`、命名是否符合拼音规则、测试是否同步放入 `CeShi/`、`.gitkeep` 与 `.gitignore` 是否一致。
+5. 生成后做六项自检：① 位置是否符合职责表；② import 前缀是否为 `from app.`；③ 命名是否符合拼音规则；④ 测试是否同步放入 `CeShi/`；⑤ `.gitkeep` 与 `.gitignore` 是否一致；⑥ **文档已同步**：`references/directory-guide.md` 与 `MuLuJiaGouShuoMing.md` 均已登记新增模块/目录。第 ⑥ 项是规则第 3 条的闭环检查——第 3 条是"要做"，本项是"做完要验"。
 
 ## 维护依据
 
