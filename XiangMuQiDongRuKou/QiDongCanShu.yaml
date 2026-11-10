@@ -1,0 +1,7 @@
+dev:
+  host: 127.0.0.1
+  port: 8000
+  workers: 1
+
+# prod 组不单列：沿用 dev 基线，实际值由项目根 .env 中的
+# HOST / PORT / WORKERS 覆盖

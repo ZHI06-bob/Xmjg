@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "xiang-mu-yuan-ma"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = ["pyyaml>=6"]
+
+[dependency-groups]
+dev = ["pytest>=8", "pytest-html>=4", "ruff>=0.6"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["XiangMuYuanMa/app"]
+
+[tool.pytest.ini_options]
+testpaths = ["XiangMuYuanMa/CeShi"]
+pythonpath = ["XiangMuYuanMa"]
+
+[tool.ruff.lint.per-file-ignores]
+"XiangMuYuanMa/CeShi/**" = ["N999"]  # 冻结命名要求包目录大写拼音，与 ruff 模块名规范冲突，定向豁免

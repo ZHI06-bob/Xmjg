@@ -1,0 +1,17 @@
+.env
+RiZhiWenJian/*/
+!RiZhiWenJian/.gitkeep
+!RiZhiWenJian/GuiDang/
+RiZhiWenJian/GuiDang/*
+!RiZhiWenJian/GuiDang/.gitkeep
+XiangMuBaoGao/ZiDongShengCheng/*
+!XiangMuBaoGao/ZiDongShengCheng/.gitkeep
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.egg-info/
