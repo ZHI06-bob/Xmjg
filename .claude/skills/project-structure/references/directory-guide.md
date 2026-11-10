@@ -20,6 +20,7 @@
 | `XiangMuYuanMa/app/` | 可 import 的包根 | 放：业务包与公共模块；不放：测试代码、非代码文件 | 保持小写拼音命名；`app/` 及其每个子包目录需含 `__init__.py`（可空），用于 editable 安装与 pytest 导入稳定 |
 | `XiangMuYuanMa/app/mokuai_a/` | 业务模块 A | 放：A 域业务代码；不放：跨模块通用逻辑（归 `gongyong/`） | 新增子包须登记；需含 `__init__.py`（可空） |
 | `XiangMuYuanMa/app/mokuai_b/` | 业务模块 B | 放：B 域业务代码；不放：跨模块通用逻辑（归 `gongyong/`） | 新增子包须登记；需含 `__init__.py`（可空） |
+| `XiangMuYuanMa/app/shili/` | 骨架示例模块 | 放：演示用的最小示例代码；不放：真实业务逻辑 | 骨架示例，可删；需含 `__init__.py`（可空） |
 | `XiangMuYuanMa/app/gongyong/` | 公共模块包 | 放：跨模块复用代码；不放：具体业务逻辑 | 新增子包须登记；需含 `__init__.py`（可空） |
 | `XiangMuYuanMa/app/gongyong/rizhi.py` | 日志模块 | 放：日志初始化与写入封装；不放：业务处理 | 日志机制变更时同步本表 |
 | `XiangMuYuanMa/CeShi/` | 测试目录 | 放：pytest 测试；不放：业务代码、运行期资源 | 与 `app/` 平级，不被 import；含 `__init__.py`（可空），用于 pytest 包结构一致与同名测试模块导入稳定 |

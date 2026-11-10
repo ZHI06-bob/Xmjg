@@ -39,12 +39,16 @@ project-root/
 │   │   │   └── __init__.py
 │   │   ├── mokuai_b/
 │   │   │   └── __init__.py
+│   │   ├── shili/
+│   │   │   ├── __init__.py
+│   │   │   └── demo.py
 │   │   └── gongyong/
 │   │       ├── __init__.py
 │   │       └── rizhi.py
 │   └── CeShi/
 │       ├── __init__.py
-│       └── test_maoyan.py
+│       ├── test_maoyan.py
+│       └── test_shili.py
 ├── RiZhiWenJian/
 │   ├── .gitkeep
 │   └── GuiDang/
@@ -77,6 +81,7 @@ project-root/
 - `XiangMuYuanMa/` 为源码根，本身不参与 import；`app/` 是唯一包根。
 - `CeShi/` 与 `app/` 平级，不被 import；含 `__init__.py`（可空），用于 pytest 包结构一致与同名测试模块导入稳定。
 - `app/` 及其每个子包目录需含 `__init__.py`（可空），用于 editable 安装与 pytest 导入稳定。
+- `app/shili/` 为骨架示例模块（演示新增模块流程），可删；命名遵循可 import 包小写拼音规则。
 - 工具层 `.claude/skills/project-structure/` 使用工具规范小写名（`SKILL.md`、`directory-guide.md`），不计入六个一级项。
 
 ## 4. 配置与依赖
